@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Programa</title>
+
+</head>
+<style>
+  @charset "utf8";
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
+
+:root {
+  font-size: calc(1vw + 1vh);
+  --bgColor: rgb(233, 230, 230);
+  --mainColor: black;
+  --linkColor: orange;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--bgColor);
+  font: 300 16px "Oswald", sans-serif;
+  color: var(--mainColor);
+	}
+h2{
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+
+
+.timeline {
+	position: relative;
+	display: grid;
+	gap: 40px;
+	max-width: 75%;
+	list-style-type: none;
+	}
+
+.timeline .timeline__line {
+	position: absolute;
+	top: 0;
+	left: .4rem;
+	width: .25rem;
+	height: 100%;
+	background: var(--mainColor);
+	}
+
+.timeline .timeline__item .info {
+	display: grid;
+	grid-template-columns: repeat(3, auto) 1fr;
+	align-items: center;
+	gap: 0.25rem;
+	}
+
+.timeline .timeline__item .info a {
+	text-decoration: none;
+	color: var(--linkColor);
+  font: 300 16px "Oswald", sans-serif;
+	}
+
+.timeline .timeline__item .info .dot {
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	}
+
+.timeline .timeline__item .info .dot::before {
+	position: absolute;
+	content: "";
+	top: -.25rem;
+	left: -.25rem;
+	right: -.25rem;
+	bottom: -.25rem;
+	background-color: var(--bgColor);
+  border-radius: inherit;
+	}
+
+.timeline .timeline__item .info .dot::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: .5rem;
+	height: .5rem;
+	border: .25rem solid var(--mainColor);
+	border-radius: inherit;
+	}
+
+.timeline .timeline__item .info .time {
+  margin-right: .5rem;
+}
+
+.timeline .timeline__item .content {
+	margin: 1rem 0 0 3.5rem;
+}
+.content{
+  max-height: 1px;
+}
+.timeline__item end{
+  margin-bottom: 10px;
+}
+
+</style>
+<body>
+<!-- partial:index.partial.html -->
+<h2>Programa</h2>
+<ul class="timeline">
+  <li class="timeline__line"></li>
+  <li class="timeline__item">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">10:00</time>
+      <h4 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bienvenida</h4>
+    </div>
+  </li>
+  <li class="timeline__item">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">10:15-10:45</time>
+      <h4 class="speaker">Christophe Larrue</h4>
+      <h4 class="title"><i>Fondos literarios de archivos suizos</i></h4>
+    </div>
+    <div class="content">
+      Título
+    </div>
+  </li>
+  <li class="timeline__item">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">10:45-11:30</time>
+      <h4 class="speaker">Mesa redonda Ginebra</h4>
+    </div>
+    <div class="content">
+Título    </div>
+  </li>
+  <li class="timeline__item break">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">11:30-11:45</time>
+      <h4 class="title">Pausa café</h4>
+    </div>
+  </li>
+  <li class="timeline__item">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">11:45-12:15</time>
+      <h4 class="speaker">Mayte García</h4>
+      <h4 class="title"><i>Fondos artísticos de los archivos suizos</i></h4>
+    </div>
+    <div class="content">
+Título    </div>
+  </li>
+  <li class="timeline__item end">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">12:30-14:30</time>
+      <h4 class="title">Comida</h4>
+    </div>
+  </li>
+  <li class="timeline__item">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">14:30-15:00</time>
+      <h4 class="speaker">Sara Sánchez del Olmo</h4>
+      <h4 class="title"><i>Fondos etnográficos de archivos suizos</i></h4>
+    </div>
+    <div class="content">
+Título    </div>
+  </li>
+  <li class="timeline__item">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">15:00-15:30</time>
+      <h4 class="speaker">Sébastien Farré</h4>
+      <h4 class="title"><i>Fondos históricos de archivos suizos</i></h4>
+    </div>
+    <div class="content">
+Título    </div>
+  </li>
+  <li class="timeline__item">
+    <div class="info">
+      <div class="dot"></div>
+      <time class="time">15:30-16:00</time>
+      <h4 class="speaker">Luis Calvo</h4>
+      <h4 class="title"><i>Fondos históricos de la televisión pública suiza</i></h4>
+    </div>
+    <div class="content">
+Título    </div>
+  </li>
+</li>
+<li class="timeline__item break">
+  <div class="info">
+    <div class="dot"></div>
+    <time class="time">16:00-16:15</time>
+    <h4 class="title">Pausa café</h4>
+  </div>
+</li>
+<li class="timeline__item">
+  <div class="info">
+    <div class="dot"></div>
+    <time class="time">16:15-17:00</time>
+    <h4 class="speaker">Mesa redonda Lausana</h4>
+  </div>
+  <div class="content">
+Título    </div>
+</li>
+<li class="timeline__item end">
+  <div class="info">
+    <div class="dot"></div>
+    <time class="time">17:15-18:45</time>
+    <h4 class="speaker">Asamblea anual de la SSEH</h4>
+  </div>
+
+</li>
+</ul>
+</body>
+</html>
